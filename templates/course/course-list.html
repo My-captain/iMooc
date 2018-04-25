@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../static/css/public.css">
+    <link rel="stylesheet" href="../../static/css/headerAndFooter.css">
+    <link rel="stylesheet" href="../../static/css/course/course-list.css">
+    <title>歧黄慕课在线学习平台</title>
+</head>
+<body>
+<header>
+    <div id="header">
+        <div id="nav" style="background-color: #fff !important;">
+            <div id="logo" class="logo">
+                <img title="iMooc" src="../../static/images/public/logo.png" onclick="window.open('./index.html', 'self')">
+            </div>
+            <ul id="header-nav-items">
+                <li>
+                    <a href="/course/list" target="_self">免费课程</a>
+                </li>
+                <li>
+                    <a href="//class.imooc.com" target="_self">
+                        学习路径
+                    </a>
+                </li>
+            </ul>
+            <div id="search-input" style="min-width: 32px; height: 72px;">
+                <div id="search-input-container">
+                    <input id="search-area-input" type="text" autocomplete="off">
+                </div>
+            </div>
+            <div id="login-area">
+                <ul>
+                    <li>
+                        <a href="#" id="js-signin-btn">登录</a>
+                    </li>
+                    <li>
+                        <div id="login-signup-separator">/</div>
+                    </li>
+                    <li>
+                        <a href="#" id="js-signup-btn">注册</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="wrap ">
+    <div class="top">
+        <div class="course-content">
+            <div class="course-nav-box">
+                <div class="course-nav-row clearfix">
+                    <span class="hd l">方向：</span>
+                    <div class="bd">
+                        <ul class="">
+                            <li class="course-nav-item on">
+                                <a href="/course/list">全部</a>
+                            </li>
+                            <li class="course-nav-item">
+                                <a href="/course/list?c=fe" data-ct="fe">中医学</a>
+                            </li>
+                            <li class="course-nav-item">
+                                <a href="/course/list?c=be" data-ct="be">中药学</a>
+                            </li>
+                            <li class="course-nav-item">
+                                <a href="/course/list?c=mobile" data-ct="mobile">针灸推拿</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-nav-row clearfix">
+                    <span class="hd l">分类：</span>
+                    <div class="bd">
+                        <ul class="">
+                            <li class="course-nav-item on">
+                                <a href="/course/list?">全部</a>
+                            </li>
+                            <li class="course-nav-item">
+                                <a href="/course/list?c=html" data-id="7" data-ct="html">中医儿科</a>
+                            </li>
+                            <li class="course-nav-item">
+                                <a href="/course/list?c=javascript" data-id="44" data-ct="javascript">中医诊断</a>
+                            </li>
+                            <li class="course-nav-item">
+                                <a href="/course/list?c=html5" data-id="221" data-ct="html5">针灸推拿</a>
+                            </li>
+                            <li class="course-nav-item">
+                                <a href="/course/list?c=html5" data-id="221" data-ct="html5">中医药基本知识</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="course-tool-bar clearfix">
+        <div class="tool-left l">
+            <a href="/course/list?sort=last" class="sort-item active">最新</a>
+            <a href="/course/list?sort=pop" class="sort-item">最热</a>
+        </div>
+        <div class="l">
+            <span class="tool-item" style="display: none;">
+                <a class="follow-learn tool-chk" href="javascript:void(0);">跟我学</a>
+            </span>
+        </div>
+        <div class="tool-right r">
+            <span class="tool-item total-num">
+                共<b>845</b>个课程
+            </span>
+            <span class="tool-item tool-pager">
+                <span class="pager-num">
+                    <b class="pager-cur">1</b>/<em class="pager-total">34</em>
+                </span>
+                <a href="javascript:void(0)" class="pager-action pager-prev  disabled"><i class="icon-left2"></i></a>
+
+                <a href="/course/list?page=2" class="pager-action pager-next"><i class="icon-right2"></i></a>
+            </span>
+        </div>
+        <div class="tool-iseasy r"><strong>难度：</strong>
+            <a href="/course/list?" class="sort-item active">全部</a>
+            <a href="/course/list?is_easy=1" class="sort-item">入门</a>
+            <a href="/course/list?is_easy=2" class="sort-item">初级</a>
+            <a href="/course/list?is_easy=3" class="sort-item">中级</a>
+            <a href="/course/list?is_easy=4" class="sort-item">高级</a>
+
+        </div>
+    </div>
+    <div class="course-list">
+        <div class="moco-course-list">
+            <div class="clearfix">
+
+                <div class="course-card-container">
+                    <a target="_blank" href="/learn/974" class="course-card">
+
+                        <div class="course-card-top">
+                            <img class="course-banner lazy" data-original="https://edu-image.nosdn.127.net/FC1DA19E563AE5BFD428E5E70E464656.jpg?imageView&thumbnail=426y240&quality=100&thumbnail=223x125&quality=100" src="https://edu-image.nosdn.127.net/FC1DA19E563AE5BFD428E5E70E464656.jpg?imageView&thumbnail=426y240&quality=100&thumbnail=223x125&quality=100" style="display: inline;">
+                            <div class="course-label">
+                                <label>中药</label>
+                                <label>国家精品课程</label>
+                            </div>
+                        </div>
+                        <div class="course-card-content">
+                            <h3 class="course-card-name">中药安全用药导论</h3>
+                            <div class="clearfix course-card-bottom">
+                                <div class="course-card-info">
+                                    <span>理论知识</span><span><i class="icon-set_sns"></i>5631</span>
+                                </div>
+                                <p class="course-card-desc">中药是祖国医学的瑰宝，她的安全使用与我们生活息息相关。近年来中药不良事件频发，已引起大家的广泛关注。本课程旨在讲授中药安全用药知识，促进中药合理应用，保障您和家人的身体健康！课程既可用于中医药专业的教学及执业医师、执业药师的继续教育，又可用于非专业人员安全用药知识的科学普及。 ​</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card-container">
+                    <a target="_blank" href="/learn/975" class="course-card">
+
+                        <div class="course-card-top">
+                            <img class="course-banner lazy" data-original="https://edu-image.nosdn.127.net/A11F7177983B40E5532F2A9A4D1DF0C3.jpg?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100" src="https://edu-image.nosdn.127.net/A11F7177983B40E5532F2A9A4D1DF0C3.jpg?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100" style="display: inline;">
+                        </div>
+                        <div class="course-card-content">
+                            <h3 class="course-card-name">中医儿科学</h3>
+                            <div class="clearfix course-card-bottom">
+                                <div class="course-card-info">
+                                    <span>重点学科</span><span><i class="icon-set_sns"></i>955</span>
+                                </div>
+                                <p class="course-card-desc">中医儿科学是一门指导学生应用中医药学认识和解决儿科临床实际问题的课程。一个国家教学名师领头的国家级教学团队，一个实力雄厚的国家级重点学科，六十多年求索，铸就南京中医药大学中医儿科学课程。本学科教师年富力强，专业知识扎实，教学经验丰富，理论功底深厚，临床实践能力强。</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card-container">
+                    <a target="_blank" href="/learn/976" class="course-card">
+
+                        <div class="course-card-top">
+                            <img class="course-banner lazy" data-original="https://edu-image.nosdn.127.net/9E2649E98F4368214C2060A4A3FE16DA.jpg?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100" src="https://edu-image.nosdn.127.net/9E2649E98F4368214C2060A4A3FE16DA.jpg?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100" style="display: inline;">
+                            <div class="course-label">
+                                <label>南京中医药大学</label>
+                                <label>高校专业课</label>
+                            </div>
+                        </div>
+                        <div class="course-card-content">
+                            <h3 class="course-card-name">中药学</h3>
+                            <div class="clearfix course-card-bottom">
+                                <div class="course-card-info">
+                                    <span>高校专业课</span>
+                                    <span>
+                                        <i class="icon-set_sns"></i>1838
+                                    </span>
+                                </div>
+                                <p class="course-card-desc">《中药学》是研究中药药性理论和临床应用的学科，是中医药院校中医药各专业必修的专业基础课、主干课。南京中医药大学中药学学科团队高瞻远瞩，审时度势，精心构筑了“传统课堂-网络学习平台-实践创新训练平台-教学临床科研基地-中药性效实验室-中药材标本室和药植园”六位一体立体化教育教学模式。。</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card-container">
+                    <a target="_blank" href="/learn/964" class="course-card">
+
+                        <div class="course-card-top">
+                            <img class="course-banner lazy" data-original="https://edu-image.nosdn.127.net/67E892B8F8045CB129B194325050DBD7.jpg?imageView&thumbnail=426y240&quality=100&thumbnail=223x125&quality=100" src="https://edu-image.nosdn.127.net/67E892B8F8045CB129B194325050DBD7.jpg?imageView&thumbnail=426y240&quality=100&thumbnail=223x125&quality=100" style="display: inline;">
+                            <div class="course-label">
+                                <label>南京中医药大学</label>
+                                <label>高校专业课</label>
+                            </div>
+                        </div>
+                        <div class="course-card-content">
+                            <h3 class="course-card-name">中医内科学</h3>
+                            <div class="clearfix course-card-bottom">
+                                <div class="course-card-info">
+                                    <span>理论</span><span><i class="icon-set_sns"></i>567</span>
+                                </div>
+                                <p class="course-card-desc">中医内科学是以中医学理论为指导，研究人体的内脏疾病，阐述内科所属病证的病因病机及其证治规律，并以传统中医药治疗方法为主的一门临床学科。是中医类各专业（中医专业、针灸推拿专业等）的主干课程，是联系中医基础理论和临床实践的桥梁，是临床各科的基础。</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card-container">
+                    <a target="_blank" href="/learn/972" class="course-card">
+
+                        <div class="course-card-top">
+                            <img class="course-banner lazy" data-original="//img3.mukewang.com/5abc6159000142f706000338-240-135.jpg" src="https://edu-image.nosdn.127.net/73502B533AA0EECFF118E3F7F025F056.jpg?imageView&thumbnail=426y240&quality=100&thumbnail=223x125&quality=100" style="display: inline;">
+                            <div class="course-label">
+                                <label>国家精品</label>
+                                <label>高校专业课</label>
+                            </div>
+                        </div>
+                        <div class="course-card-content">
+                            <h3 class="course-card-name">中医诊断学（上）</h3>
+                            <div class="clearfix course-card-bottom">
+                                <div class="course-card-info">
+                                    <span>理论</span><span><i class="icon-set_sns"></i>4428</span>
+                                </div>
+                                <p class="course-card-desc">古人云：望而知之谓之神，闻而知之谓之圣，问而知之谓之工，切脉而知之谓之巧。 本门课程在名师的带领下，将运用直观、形象、通俗的呈现方式，为大家讲解中医是如何通过望、闻、问、切四种诊察方法了解人体的健康与疾病状态。 请和我们一起步入《中医诊断学》（上）课程的学习之旅吧！
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card-container">
+                    <a target="_blank" href="/learn/963" class="course-card">
+
+                        <div class="course-card-top">
+                            <img class="course-banner lazy" data-original="https://edu-image.nosdn.127.net/224B97C95F189F168E3E2343FBE76F5E.jpg?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100" src="https://edu-image.nosdn.127.net/224B97C95F189F168E3E2343FBE76F5E.jpg?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100" style="display: inline;">
+                            <div class="course-label">
+                                <label>基础理论</label>
+                            </div>
+                        </div>
+                        <div class="course-card-content">
+                            <h3 class="course-card-name">中医基础理论</h3>
+                            <div class="clearfix course-card-bottom">
+                                <div class="course-card-info">
+                                    <span>入门</span><span><i class="icon-set_sns"></i>1539</span>
+                                </div>
+                                <p class="course-card-desc">中医药学已走出国门，风靡世界，其良好的疗效和独特的魅力正吸引着越来越多的人了解和学习中医药学。你想知道中医是如何认识人体的？中医诊病治病有什么特色？经络的奥秘是什么？人的体质有哪些类型？如何正确地养护生命、维护健康？《中医基础理论》为你解惑答疑,带你走进中医药学这个伟大宝库。</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card-container">
+                    <a target="_blank" href="/learn/958" class="course-card">
+
+                        <div class="course-card-top">
+                            <img class="course-banner lazy" data-original="https://edu-image.nosdn.127.net/994BA70A0006DEA1D027779BCB08A279.png?imageView&thumbnail=426y240&quality=100&thumbnail=223x125&quality=100" src="https://edu-image.nosdn.127.net/994BA70A0006DEA1D027779BCB08A279.png?imageView&thumbnail=426y240&quality=100&thumbnail=223x125&quality=100" style="display: inline;">
+                            <div class="course-label">
+                                <label>国家精品课程</label>
+                                <label>针灸推拿</label>
+                            </div>
+                        </div>
+                        <div class="course-card-content">
+                            <h3 class="course-card-name">针灸学导论</h3>
+                            <div class="clearfix course-card-bottom">
+                                <div class="course-card-info">
+                                    <span>导论</span><span><i class="icon-set_sns"></i>2193</span>
+                                </div>
+                                <p class="course-card-desc">针灸学是祖国医学宝库中的璀璨明珠，在世界医学舞台上熠熠生辉。2010年联合国教科文组织将“中国针灸”列入“人类非物质文化遗产代表作名录”。本课程以名师领衔、视频演示、线上互动等形式，概述针灸历史，勾玄理论框架、点睛治疗手段，让我们亲近针灸、品味针灸、领悟针灸，共同进入多彩的针灸世界。</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="page">
+            <span class="disabled_page">首页</span>
+            <span class="disabled_page">上一页</span>
+            <a href="javascript:void(0)" class="active text-page-tag">1</a>
+            <a class="text-page-tag" href="/course/list?page=2">2</a>
+            <a class="text-page-tag" href="/course/list?page=3">3</a>
+            <a class="text-page-tag" href="/course/list?page=4">4</a>
+            <a class="text-page-tag" href="/course/list?page=5">5</a>
+            <a class="text-page-tag" href="/course/list?page=6">6</a>
+            <a class="text-page-tag" href="/course/list?page=7">7</a>
+            <a href="/course/list?page=2">下一页</a>
+            <a href="/course/list?page=34">尾页</a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-wrap idx-width">
+            <div class="footer-sns clearfix">
+                <div class="l">
+                    <a href="javascript:void(0);" class="footer-sns-weixin" target="_blank" title="微信">
+                        <i class="footer-sns-weixin-expand"></i>
+                    </a>
+                    <p>官方公众号</p>
+                </div>
+                <div class="l">
+                    <a href="http://weibo.com/u/3306361973" class="footer-sns-weibo hide-text" target="_blank" title="新浪微博">
+                    </a>
+                    <p>官方微博</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-link">
+            <!-- <a href="/about/us" target="_blank" title="关于我们">关于我们</a> -->
+            <a href="/about/cooperate" target="_blank" title="企业合作">企业合作</a>
+            <a href="/about/job" target="_blank" title="人才招聘">人才招聘</a>
+            <a href="/about/contact" target="_blank" title="联系我们">联系我们</a>
+            <a href="/about/recruit" target="_blank" title="讲师招募">讲师招募</a>
+            <a href="/about/faq" target="_blank" title="常见问题">常见问题</a>
+            <a href="/user/feedback" target="_blank" title="意见反馈">意见反馈</a>
+            <a href="http://daxue.imooc.com/" target="_blank">慕课大学</a>
+            <a href="/about/friendly" target="_blank" title="友情链接">友情链接</a>
+        </div>
+        <div class="footer-copyright">
+            <p>©&nbsp;2018&nbsp;中源团队&nbsp;&nbsp;南京中医药大学 信息技术学院</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

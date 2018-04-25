@@ -1,0 +1,155 @@
+header {
+    z-index: 6666;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    background: #FFFFFF;
+    box-shadow: 0 -4px 8px 0 rgba(7,17,27,.1);
+    z-index: 6666;
+}
+#login-background-container {
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    bottom: 132px;
+    top: 72px;
+    background: url("../images/login/background.jpg") no-repeat;
+    background-position: 100px center;
+    background-size: auto 80%;
+}
+#login-background {
+    z-index: 11;
+    width: 100%;
+    height:  100%;
+    background: url("../images/login/background.jpg") no-repeat;
+    background-position: 50px center;
+    background-size: auto 80%;
+    content: '';
+    -webkit-filter: blur(8px);
+    -moz-filter: blur(8px);
+    -ms-filter: blur(8px);
+    -o-filter: blur(8px);
+    filter: blur(8px);
+    background-attachment: fixed;
+}
+.login-box{
+    z-index: 66666;
+    position: absolute;
+    right: 196px;
+    top:  126px;
+    width: 320px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(7,17,27,.1);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(7,17,27,.1);
+    box-shadow: 0px 0px 90px 0px rgba(7,17,27,.1);
+}
+.lb-header{
+    color: #00415d;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    text-align:center;
+    height: 40px;
+    width:  100%;
+    box-shadow: 0 2px 8px 0 rgba(7,17,27,.1);
+}
+.lb-header a{
+    width: 50%;
+    /* margin-left:  10%; */
+    float:  left;
+    display: block;
+    text-decoration: none;
+    height:  20px;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+.lb-header .active{
+    color: #DF4A32;
+    /* font-size: 18px; */
+}
+.email-login,.email-signup{
+    position:relative;
+    float: left;
+    width: 100%;
+    height:auto;
+    margin-top: 20px;
+    text-align:center;
+}
+.u-form-group{
+    width:100%;
+    margin-bottom: 10px;
+}
+.u-form-group input[type="email"],
+.u-form-group input[type="password"]{
+    width: 80%;
+    height:45px;
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    border-radius: 2px;
+    color: #333;
+    font-size:0.8rem;
+    -webkit-transition:all 0.1s linear;
+    -moz-transition:all 0.1s linear;
+    transition:all 0.1s linear;
+}
+.u-form-group input:focus{
+    border-color: #358efb;
+}
+.u-form-group button{
+    margin-top: 10px;
+    width: 68%;
+    background-color:#DF4A32;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 14px 0;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+.fast-login-container {
+    margin: 0 auto;
+    width: 60%;
+    height: 100px;
+}
+.fast-login {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+#fast-login-weixin {
+    margin-left: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 40px;
+    width: 40px;
+    background-image: url(../images/login/weixin.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#fast-login-QQ {
+    margin-left: 74px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 40px;
+    width: 40px;
+    background-image: url(../images/login/QQ.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.forgot-password{
+    width: 90%;
+    text-align: right;
+    text-decoration: underline;
+    color: #888;
+    font-size: 0.75rem;
+}

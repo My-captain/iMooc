@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/public.css">
+    <link rel="stylesheet" href="/static/css/headerAndFooter.css">
+    <link rel="stylesheet" href="http://vjs.zencdn.net/6.6.3/video-js.css">
+    <link rel="stylesheet" href="/static/css/course/course-video.css">
+</head>
+<body>
+<header>
+    <div id="header">
+        <div id="nav" style="background-color: #fff !important;">
+            <div id="logo" class="logo">
+                <img title="iMooc" src="/static/images/public/logo.png" onclick="window.open('./index.html', 'self')">
+            </div>
+            <ul id="header-nav-items">
+                <li>
+                    <a href="/course/list" target="_self">免费课程</a>
+                </li>
+                <li>
+                    <a href="//class.imooc.com" target="_self">
+                        学习路径
+                    </a>
+                </li>
+            </ul>
+            <div id="search-input" style="min-width: 32px; height: 72px;">
+                <div id="search-input-container">
+                    <input id="search-area-input" type="text" autocomplete="off">
+                </div>
+            </div>
+            <div id="login-area">
+                <ul>
+                    <li>
+                        <a href="#" id="js-signin-btn">登录</a>
+                    </li>
+                    <li>
+                        <div id="login-signup-separator">/</div>
+                    </li>
+                    <li>
+                        <a href="#" id="js-signup-btn">注册</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="course-video-container">
+    <video id="my-video" class="video-js" controls preload="auto" data-setup="{}">
+        <source src="{{ lesson.get_video.0.video_source.url }}" type='video/mp4'>
+    </video>
+</div>
+
+<div id="course-learn-infos-container">
+    <div id="comment-qa-container">
+        <div id="title-nav-bar">
+            <ul id="title-nav">
+                <li class="title-nav-item">评论</li>
+                <li class="title-nav-item">问答</li>
+                <li class="title-nav-item">笔记</li>
+            </ul>
+        </div>
+        <div id="result-list-container">
+            <ul class="result-list">
+                <li class="result-list-item">
+                    <div class="user-image">
+                        <img style="width: 100%;height: 100%" src="/static/images/user/01.jpg" alt="">
+                    </div>
+                    <div class="right-user-infos-container">
+                        <div class="user-name">痞人八戒</div>
+                        <div class="comment-content">终于能看到自己想学的内容了、好开心</div>
+                        <div class="comment-time">时间：6天前</div>
+                        <div class="comment-fav-num">3</div>
+                    </div>
+                </li>
+                <li class="result-list-item">
+                    <div class="user-image">
+                        <img style="width: 100%;height: 100%" src="/static/images/user/01.jpg" alt="">
+                    </div>
+                    <div class="right-user-infos-container">
+                        <div class="user-name">痞人八戒</div>
+                        <div class="comment-content">终于能看到自己想学的内容了、好开心</div>
+                        <div class="comment-time">时间：6天前</div>
+                        <div class="comment-fav-num">3</div>
+                    </div>
+                </li>
+                <li class="result-list-item">
+                    <div class="user-image">
+                        <img style="width: 100%;height: 100%" src="/static/images/user/01.jpg" alt="">
+                    </div>
+                    <div class="right-user-infos-container">
+                        <div class="user-name">痞人八戒</div>
+                        <div class="comment-content">终于能看到自己想学的内容了、好开心</div>
+                        <div class="comment-time">时间：6天前</div>
+                        <div class="comment-fav-num">3</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="recommend-courses-container">
+        <h3 class="recommend-title">推荐课程</h3>
+        <ul class="recommend-courses-list">
+            <li class="recommend-courses-item">
+                <div class="rec-course-image">
+                    <img src="//img3.mukewang.com/szimg/583e42fb0001e04f05400300-360-202.jpg" alt="">
+                </div>
+                <div class="rec-course-infos-container">
+                    <div class="rec-course-name">WebApp书城整站开发</div>
+                    <div class="rec-course-learn-nums">- 11668人在学</div>
+                </div>
+            </li>
+            <li class="recommend-courses-item">
+                <div class="rec-course-image">
+                    <img src="//img3.mukewang.com/szimg/583e42fb0001e04f05400300-360-202.jpg" alt="">
+                </div>
+                <div class="rec-course-infos-container">
+                    <div class="rec-course-name">WebApp书城整站开发</div>
+                    <div class="rec-course-learn-nums">- 11668人在学</div>
+                </div>
+            </li>
+            <li class="recommend-courses-item">
+                <div class="rec-course-image">
+                    <img src="//img3.mukewang.com/szimg/583e42fb0001e04f05400300-360-202.jpg" alt="">
+                </div>
+                <div class="rec-course-infos-container">
+                    <div class="rec-course-name">WebApp书城整站开发</div>
+                    <div class="rec-course-learn-nums">- 11668人在学</div>
+                </div>
+            </li>
+            <li class="recommend-courses-item">
+                <div class="rec-course-image">
+                    <img src="//img3.mukewang.com/szimg/583e42fb0001e04f05400300-360-202.jpg" alt="">
+                </div>
+                <div class="rec-course-infos-container">
+                    <div class="rec-course-name">WebApp书城整站开发</div>
+                    <div class="rec-course-learn-nums">- 11668人在学</div>
+                </div>
+            </li>
+            <li class="recommend-courses-item">
+                <div class="rec-course-image">
+                    <img src="//img3.mukewang.com/szimg/583e42fb0001e04f05400300-360-202.jpg" alt="">
+                </div>
+                <div class="rec-course-infos-container">
+                    <div class="rec-course-name">WebApp书城整站开发</div>
+                    <div class="rec-course-learn-nums">- 11668人在学</div>
+                </div>
+            </li>
+            <li class="recommend-courses-item">
+                <div class="rec-course-image">
+                    <img src="//img3.mukewang.com/szimg/583e42fb0001e04f05400300-360-202.jpg" alt="">
+                </div>
+                <div class="rec-course-infos-container">
+                    <div class="rec-course-name">WebApp书城整站开发</div>
+                    <div class="rec-course-learn-nums">- 11668人在学</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-wrap idx-width">
+            <div class="footer-sns clearfix">
+                <div class="l">
+                    <a href="javascript:void(0);" class="footer-sns-weixin" target="_blank" title="微信">
+                        <i class="footer-sns-weixin-expand"></i>
+                    </a>
+                    <p>官方公众号</p>
+                </div>
+                <div class="l">
+                    <a href="http://weibo.com/u/3306361973" class="footer-sns-weibo hide-text" target="_blank" title="新浪微博">
+                    </a>
+                    <p>官方微博</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-link">
+            <!-- <a href="/about/us" target="_blank" title="关于我们">关于我们</a> -->
+            <a href="/about/cooperate" target="_blank" title="企业合作">企业合作</a>
+            <a href="/about/job" target="_blank" title="人才招聘">人才招聘</a>
+            <a href="/about/contact" target="_blank" title="联系我们">联系我们</a>
+            <a href="/about/recruit" target="_blank" title="讲师招募">讲师招募</a>
+            <a href="/about/faq" target="_blank" title="常见问题">常见问题</a>
+            <a href="/user/feedback" target="_blank" title="意见反馈">意见反馈</a>
+            <a href="http://daxue.imooc.com/" target="_blank">慕课大学</a>
+            <a href="/about/friendly" target="_blank" title="友情链接">友情链接</a>
+        </div>
+        <div class="footer-copyright">
+            <p>©&nbsp;2018&nbsp;中源团队&nbsp;&nbsp;南京中医药大学 信息技术学院</p>
+        </div>
+    </div>
+</footer>
+<script src="http://vjs.zencdn.net/6.6.3/video.js"></script>
+</body>

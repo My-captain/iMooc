@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/public.css">
+    <link rel="stylesheet" href="../static/css/headerAndFooter.css">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <title>登录/注册</title>
+</head>
+
+<body>
+<header>
+    <div id="header">
+        <div id="nav" style="background-color: #fff !important;">
+            <div id="logo" class="logo">
+                <img title="iMooc" src="../static/images/public/logo.png" onclick="window.open('./index.html', 'self')">
+            </div>
+            <ul id="header-nav-items">
+                <li>
+                    <a href="/course/list" target="_self">免费课程</a>
+                </li>
+                <li>
+                    <a href="//class.imooc.com" target="_self">
+                        学习路径
+                    </a>
+                </li>
+            </ul>
+            <div id="search-input" style="min-width: 32px; height: 72px;">
+                <div id="search-input-container">
+                    <input id="search-area-input" type="text" autocomplete="off">
+                </div>
+            </div>
+            <div id="login-area">
+                <ul>
+                    <li>
+                        <a href="#" id="js-signin-btn">登录</a>
+                    </li>
+                    <li>
+                        <div id="login-signup-separator">/</div>
+                    </li>
+                    <li>
+                        <a href="#" id="js-signup-btn">注册</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--登录/注册框-->
+<div id="login-background-container">
+    <div id="login-background">
+    </div>
+    <div class="login-box">
+        <div class="lb-header">
+            <a href="#" class="" id="login-box-link">登录</a>
+            <a href="#" class="active" id="signup-box-link">注册</a>
+        </div>
+        <form class="email-login" action="{% url 'login' %}" method="post">
+            <div class="u-form-group">
+                <input name="email" type="email" placeholder="邮箱"/>
+            </div>
+            <div class="u-form-group">
+                <input name="password" type="password" placeholder="密码"/>
+            </div>
+            <div class="u-form-group" >
+                <button type="button">登录</button>
+            </div>
+            <div class="fast-login-container">
+                <div id="fast-login-weixin" class="fast-login" onclick="window.open('', '_self')"></div>
+                <div id="fast-login-QQ" class="fast-login" onclick="window.open('', '_self')"></div>
+            </div>
+            <div class="u-form-group">
+                <a href="#" class="forgot-password">忘记密码?</a>
+            </div>
+            {% csrf_token %}
+        </form>
+        <form class="email-signup" action="{% url 'register' %}" method="post">
+            <div class="u-form-group">
+                <input name="email" type="email" placeholder="邮箱"/>
+            </div>
+            <div class="u-form-group">
+                <input name="password" type="password" placeholder="密码"/>
+            </div>
+            <div class="u-form-group">
+                <input name="re-password" type="password" placeholder="确认密码"/>
+            </div>
+            <div class="form-group captcha1 {% if register_form.errors.captcha %}errorput{% endif %}">
+                {{ register_form.captcha }}
+            </div>
+            <div class="error btns" id="jsEmailTips">
+                {% for key,error in register_form.errors.items %}{{ error }}{% endfor%}{{ message }}
+            </div>
+            <div class="u-form-group">
+                <button type="submit">注册</button>
+            </div>
+            {% csrf_token %}
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-wrap idx-width">
+            <div class="footer-sns clearfix">
+                <div class="l">
+                    <a href="javascript:void(0);" class="footer-sns-weixin" target="_blank" title="微信">
+                        <i class="footer-sns-weixin-expand"></i>
+                    </a>
+                    <p>官方公众号</p>
+                </div>
+                <div class="l">
+                    <a href="http://weibo.com/u/3306361973" class="footer-sns-weibo hide-text" target="_blank" title="新浪微博">
+                    </a>
+                    <p>官方微博</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-link">
+            <!-- <a href="/about/us" target="_blank" title="关于我们">关于我们</a> -->
+            <a href="/about/cooperate" target="_blank" title="企业合作">企业合作</a>
+            <a href="/about/job" target="_blank" title="人才招聘">人才招聘</a>
+            <a href="/about/contact" target="_blank" title="联系我们">联系我们</a>
+            <a href="/about/recruit" target="_blank" title="讲师招募">讲师招募</a>
+            <a href="/about/faq" target="_blank" title="常见问题">常见问题</a>
+            <a href="/user/feedback" target="_blank" title="意见反馈">意见反馈</a>
+            <a href="http://daxue.imooc.com/" target="_blank">慕课大学</a>
+            <a href="/about/friendly" target="_blank" title="友情链接">友情链接</a>
+        </div>
+        <div class="footer-copyright">
+            <p>©&nbsp;2018&nbsp;中源团队&nbsp;&nbsp;南京中医药大学 信息技术学院</p>
+        </div>
+    </div>
+</footer>
+</body>
+<script type="text/javascript" src="../static/js/public/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".email-login").hide();
+        $("#signup-box-link").click(function(){
+            $(".email-login").fadeOut(100);
+            $(".email-signup").delay(100).fadeIn(100);
+            $("#login-box-link").removeClass("active");
+            $("#signup-box-link").addClass("active");
+        });
+        $("#login-box-link").click(function(){
+            $(".email-login").delay(100).fadeIn(100);;
+            $(".email-signup").fadeOut(100);
+            $("#login-box-link").addClass("active");
+            $("#signup-box-link").removeClass("active");
+        });
+        $("button").click(function(){
+            window.open("index.html","_self")
+        });
+        $("#id_captcha_1").attr("placeholder", "验证码")
+    });
+</script>
+</html>
