@@ -178,10 +178,10 @@ STATICFILES_DIRS = (
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = "smtp.163.com"
 EMAIL_PORT = 25
-EMAIL_HOST_USER = "15105185056@163.com"
-EMAIL_HOST_PASSWORD = "19970713bajie"
+EMAIL_HOST_USER = "xxxxxxxx@163.com"
+EMAIL_HOST_PASSWORD = "xxxxxxxxxxx"
 EMAIL_USE_TLS = False
-EMAIL_FROM = "15105185056@163.com"
+EMAIL_FROM = "xxxxxxxx@163.com"
 
 # model静态文件处理(课程图片、用户头像等)
 MEDIA_URL = '/media/'
